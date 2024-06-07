@@ -5,11 +5,11 @@ const ConditionRendering =() =>{
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     
     let message;
-    if(isLoggedIn){
-        message = <p>Welcome, User</p>
-    }else{
-        message = <p>Please login!</p>
-    }
+    // if(isLoggedIn){
+    //     message = <p>Welcome, User</p>
+    // }else{
+    //     message = <p>Please login!</p>
+    // }
 
     function handleLogin(){
         setIsLoggedIn(true)
@@ -17,7 +17,12 @@ const ConditionRendering =() =>{
 
     return (
         <div>
-            {message}
+            {/* {message} */}
+
+            {
+                isLoggedIn ? <p>Welcome, User</p> : <p>Please login!</p>
+            }
+
             <br/>
             <button onClick = {handleLogin}>Login</button>
         </div>
